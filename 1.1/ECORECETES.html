@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EcoRecetas</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #a5d6a7, #81c784);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative; 
+            overflow: hidden; 
+        }
+
+        .background-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: rgba(0, 100, 0, 0.1); 
+            font-size: 20px; 
+            font-family: Arial, sans-serif;
+            text-align: center; 
+            line-height: 60px; 
+            pointer-events: none; 
+            overflow: hidden; 
+            white-space: pre-line; 
+            z-index: 0; 
+        }
+
+        .login-container {
+            background-color: #cccccc; 
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            text-align: center;
+            position: relative; 
+            z-index: 1; 
+        }
+
+        .login-header {
+            color: #2e7d32; 
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .profile-pic {
+            width: 80px; 
+            height: 80px;
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 15px; 
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #4caf50; 
+        }
+
+        input[type="text"], input[type="password"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #1e4620;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus {
+            border-color: #4caf50; 
+        }
+
+        .login-button {
+            background-color: #4caf50; 
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #388e3c; 
+        }
+
+        .login-button:active {
+            background-color: #2e7d32;         }
+
+        .forgot-password {
+            display: block;
+            margin-top: 10px;
+            color: #4caf50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .forgot-password:hover {
+            color: #0f2310 
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-text"> EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas EcoRecetas 
+        
+    </div>
+    <div class="login-container">
+        <h1 class="login-header">¡Bienvenido a EcoRecetas!</h1>
+        <img src="ZANAHORIA.jpg" alt="Foto de perfil" class="profile-pic"> 
+        <form class="login-form">
+            <div class="input-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="login-button" id="loginButton">Iniciar Sesión</button>
+            </div>
+            <div class="input-group">
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const loginButton = document.getElementById('loginButton');
+
+        loginButton.addEventListener('mousedown', function() {
+            this.style.backgroundColor = '#008006'; 
+        });
+
+        loginButton.addEventListener('mouseup', function() {
+            this.style.backgroundColor = '#4caf50'; 
+        });
+
+        loginButton.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '#4caf50'; 
+        });
+    </script>
+</body>
+</html>
